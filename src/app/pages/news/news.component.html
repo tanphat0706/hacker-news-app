@@ -1,0 +1,24 @@
+<div class="news-wrapper">
+    <div class="container">
+        <app-spinner [isLoading]="!isReady"></app-spinner>
+        <mat-card class="card" *ngIf="isReady">
+            <mat-card-header>
+                <mat-card-title>
+                    <h2>{{article?.title}}</h2>
+                </mat-card-title>
+                <mat-card-subtitle>{{article?.subtitle}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="article?.coverImageUrl" alt="Photo of {{article?.title}}">
+            <mat-card-content>
+                <div class="description mb-3" [innerHtml]="article?.description">
+                </div>
+                <div class="content" [innerHtml]="article?.content">
+                </div>
+                <div class="content">
+                    <b>SOURCE: </b> <a [href]="article?.url">{{article?.url}}</a>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        
+    </div>
+</div>

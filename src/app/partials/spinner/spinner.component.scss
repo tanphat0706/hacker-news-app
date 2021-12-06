@@ -1,0 +1,16 @@
+.app-spinner {
+    position: fixed;
+    top: 55vh;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 9;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #fefefe;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
