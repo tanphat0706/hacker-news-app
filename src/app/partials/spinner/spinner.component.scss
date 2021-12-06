@@ -4,6 +4,11 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: 9;
+    ::ng-deep {
+        .mat-spinner circle {
+            stroke: #ff6600;
+        }
+    }
 }
 .overlay{
     height: 100%;

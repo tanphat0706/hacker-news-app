@@ -1,7 +1,9 @@
 <div class="home-wrapper">
     <div class="container-fluid">
-        <div class="terminal">
-            <pre class="tw"></pre>
+        <div class="content">
+            <div class="terminal">
+                <pre class="tw"></pre>
+            </div>
         </div>
         <div class="content">
             <app-spinner [isLoading]="!isReady"></app-spinner>
@@ -20,7 +22,7 @@
                     </mat-card-header>
                     <img 
                         mat-card-image [src]="art.coverImageUrl" 
-                        onerror="this.onerror=null;this.src='/assets/img/no-image.png';"
+                        onerror="this.onerror=null;this.src='/hacker-news/assets/img/no-image.png';"
                         />
                     <mat-card-content>
                         <p [innerHtml]="art.description"></p>

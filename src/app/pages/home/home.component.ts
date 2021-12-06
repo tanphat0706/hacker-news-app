@@ -39,11 +39,7 @@ export class HomeComponent implements OnInit {
     .rest(500)
     .changeOps({ deleteSpeed: 10 })
     .clear()
-    .type('The best Hacker News application is showing.')
-    .rest(500)
-    .changeOps({ deleteSpeed: 10 })
-    .clear()
-    .type('This is simple application was build by Angular 12.')
+    .type('The Hacker News is showing.\nApplication was build by Angular 12.')
     .rest(500)
     .changeOps({ deleteSpeed: 10 })
     .clear()
@@ -62,8 +58,6 @@ export class HomeComponent implements OnInit {
         window.scrollTo(0, 0);
         this.isReady = true;
       }
-    }, (error) => {
-      console.log(error);
     });
   }
 
@@ -78,8 +72,6 @@ export class HomeComponent implements OnInit {
       if (result.data) {
         return result.data.article.coverImageUrl;
       }
-    }, (error) => {
-      console.log(error);
     });
   }
   ngOnDestroy(): void {
@@ -87,14 +79,12 @@ export class HomeComponent implements OnInit {
   }
 
   increase() {
-    console.log(this.isReady);
     if (this.pageIndex >= 0) {
       this.pageIndex += 1;
       this.getListArticle();
     }
   }
   decrease() {
-    console.log(this.isReady);
     if (this.pageIndex > 0) {
       this.pageIndex -= 1;
       this.getListArticle();

@@ -29,11 +29,8 @@ export class NewsComponent implements OnInit {
     result.subscribe((result) => {
       if (result.data) {
         this.article = result.data.article;
-          console.log(result.data);
       }
       this.isReady = true;
-    }, (error) => {
-      console.log(error);
     });
   }
 
