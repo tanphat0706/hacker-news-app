@@ -15,7 +15,7 @@
                 fxFlex.md="25%"
                 *ngFor="let art of articles"
                 >
-                <mat-card class="mat-elevation-z4" (click)="viewDetail(art.url)">
+                <mat-card class="mat-elevation-z4" (click)="viewDetail(art)">
                     <mat-card-header>
                         <mat-card-title>{{ art.title }}</mat-card-title>
                         <mat-card-subtitle>{{art.subtitle}}</mat-card-subtitle>

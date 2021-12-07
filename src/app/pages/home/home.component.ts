@@ -52,6 +52,7 @@ export class HomeComponent implements OnInit {
     const result = this.service.getArticleList(pageNumber);
     this.subcription = result.subscribe((result) => {
       if (result.data) {
+        console.log(result.data)
         this.articles = result.data.articles.map((art: any) => {
           return {...art, description: this.utils.stringReplaceWithInput(art.description, ' | ', '<br>'), image: this.handleData(art)}
         });
@@ -61,9 +62,10 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  viewDetail(url: any) {
-    localStorage.setItem('currentUrl', url);
-    this.router.navigate(['news-detail']);
+  viewDetail(item: any) {
+    localStorage.setItem('currentUrl', item.url);
+    const slug = this.utils.convertTitleToSlug(item.title);
+    this.router.navigate(['news-detail', slug]);
   }
 
   handleData(data: any) {

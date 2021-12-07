@@ -14,7 +14,9 @@ export class UtilsService {
         return newString;
     }
 
-    setPreviousUrl(previousUrl: string) {
-        this.previousUrl.next(previousUrl);
+    convertTitleToSlug(title: String) {
+        return title.toLowerCase()
+        .replace(/ /g, '-')
+        .replace(/[^\w-]+/g, '');
     }
 }

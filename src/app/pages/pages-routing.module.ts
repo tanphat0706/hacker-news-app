@@ -12,7 +12,7 @@ const routes: Routes = [
         component: HomeComponent,
       },
       {
-        path: 'news-detail',
+        path: 'news-detail/:slug',
         component: NewsComponent,
       },
     ]
